@@ -1,10 +1,10 @@
 import "./App.css";
-
+import Weather from "./Weather";
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather App</h1>
+        <Weather />
 
         <footer>
           This project was coded by{" "}
@@ -23,10 +23,6 @@ export default function App() {
           >
             open-sourced on GitHub
           </a>
-          <br />
-          <button type="button" class="btn btn-success">
-            Success
-          </button>
         </footer>
       </div>
     </div>

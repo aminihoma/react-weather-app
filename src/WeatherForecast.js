@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./WeatherForecast.css";
 import axios from "axios";
 export default function WeatherForecast(props) {
   let [ready, setReady] = useState(false);
   let [forecast, setForecast] = useState(null);
+  useEffect(() => {
+    //Runs on the first render
+    //And any time any dependency value changes
+    setReady(false);
+  }, [props.data.coord]);
+
   function day(data) {
     let day = data.getDay();
     let week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
